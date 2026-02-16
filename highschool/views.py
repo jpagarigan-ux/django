@@ -2,7 +2,7 @@
 from django.shortcuts import render
 # Import the Student model from the current app's models.py file
 # The dot (.) means "current package/app"
-from .models import Student
+from . models import Student
 
 # Create your views here.
 
@@ -33,15 +33,15 @@ def enroll(request):
 
         # Create a context dictionary to pass data to the template
         # This allows the template to display the submitted information
-        context = {
+        info = {
             "submitted": True,     # Flag to show success message in template
-            "firstname": firstname,  # Pass firstname to template
-            "lastname": lastname,    # Pass lastname to template
+            "firstname": firstname,  # Pass firstname to template 
+            "lastname": lastname,    # Pass lastname to template 
             "age": age,              # Pass age to template
             "gender": gender,        # Pass gender to template
         }
         # Render the template with the context data and return the response
-        return render(request, "enroll.html", context)
+        return render(request, "enroll.html", info)
 
     # If request method is GET (user just visiting the page),
     # render the empty form without any context data
