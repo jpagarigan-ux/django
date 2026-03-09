@@ -19,10 +19,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 
+from theme import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('theme.urls')),
     path('highschool/', include('highschool.urls')),
+
+    # Added this line if you don't want to make a urls.py file in theme app, you can directly map the enroll view here
 ]
 
 

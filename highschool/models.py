@@ -3,7 +3,6 @@ from django.db import models
 
 # Create your models here.
 
-
 # Define the Student model - this represents a database table
 # Each model in Django is a Python class that inherits from models.Model
 class Student(models.Model):
